@@ -10,16 +10,16 @@
 class Solution:
     @staticmethod
     def two_sum(nums: [int], target: int) -> [int]:
+        # 一个键为列表值，值为列表索引的字典
         result = {}
         length = len(nums)
         start = 0
         while start < length:
+            # 如果差值在字典的键中，则取出索引，返回该索引和当前索引组成的列表
             if result.__contains__(target - nums[start]):
                 return [nums.index(target - nums[start]), start]
+            # 如果差值不存在，则将该列表值和索引以键值对形式存入字典
             else:
                 result[nums[start]] = start
             start += 1
         return [0, 0]
-
-
-print(Solution.two_sum([3, 3], 6))
