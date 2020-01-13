@@ -40,7 +40,3 @@ class Solution:
             if i != '#':
                 result += i
         return result
-
-
-if __name__ == '__main__':
-    print(Solution.longest_palindrome("aaabcaaa"))
